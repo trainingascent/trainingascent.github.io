@@ -12,40 +12,6 @@
     <meta name="referrer" content="origin">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900">
-
-<script>
-    const form = document.getElementById('myForm');
-    const submitButton = document.getElementById('submitButton');
-
-    submitButton.addEventListener('click', function (event) {
-        event.preventDefault();
-
-        // Serialize the form data
-        const formData = new FormData(form);
-
-        // Create an XMLHttpRequest object
-        const xhr = new XMLHttpRequest();
-
-        // Define the HTTP method, URL of your PHP script, and set it to be asynchronous
-        xhr.open('POST', 'https://trainingascent.000webhostapp.com/index.php', true);
-
-        // Set up an event handler for when the request is complete
-        xhr.onload = function () {
-            if (xhr.status === 200) {
-                // Request was successful, handle the response (if any)
-                console.log(xhr.responseText);
-            } else {
-                // Request failed
-                console.error('Request failed with status ' + xhr.status);
-            }
-        };
-
-        // Send the form data to the PHP script
-        xhr.send(formData);
-    });
-</script>
-    
-    
     
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
