@@ -303,13 +303,13 @@
     },
     11434: function(t, e, n) {
         "use strict";
-        function i() {
+       function i() {
             return {
-                submit: function(t) {
+                submi: function(t) {
                     t.preventDefault(),
                     t.stopPropagation();
                     var form = p(this);
-                    form.find('input[type="submit"]').prop("disabled", true);
+                    form.find('input[type="submi"]').prop("disabled", true);
                     var url = form.attr("action")
                       , e = form.attr("source")
                       , n = form.attr("method") || "POST"
