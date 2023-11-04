@@ -141,7 +141,7 @@
   .fr-view .fr-text-spaced {
     letter-spacing: 1px; }
   .fr-view .fr-text-uppercase {
-    text-transform: uppercase; }
+     }
   .fr-view .fr-class-highlighted {
     background-color: #ffff00; }
   .fr-view .fr-class-code {
@@ -6969,7 +6969,7 @@ ul.u-text li:last-child {
   padding: 1em;
 }
 .u-backlink a:first-letter {
-  
+  texttransform: capitalize;
 }
 .u-backlink a,
 .u-backlink p {
@@ -17619,7 +17619,7 @@ p {
   margin-bottom: 0.5rem;
 }
 .u-uppercase {
-  text-transform: uppercase;
+  
 }
 .u-align-left {
   text-align: left;
