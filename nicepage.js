@@ -446,8 +446,8 @@
             p.each(e, (function(index, t) {
                 var e = p(t).attr("name")
                   , n = p(t).val();
-                if (e && n)
-                    data[e.toUpperCase()] = n
+
+                
             }
             ));
             var n = (url = url.replace("/post?", "/post-json?") + "&c=?").indexOf("u=") + 2;
