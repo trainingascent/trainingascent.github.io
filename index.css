@@ -1077,7 +1077,7 @@
 
 .u-section-6 .u-btn-1 {
   border-style: solid;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 2px;
   font-weight: bold;
 }
