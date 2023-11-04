@@ -2548,7 +2548,7 @@
     function Xe(e) {
         var t = S.cssProps[e] || Ue[e];
         return t || (e in ze ? e : Ue[e] = function(e) {
-            var t = e[0].toUpperCase() + e.slice(1)
+            var t = e.slice(1) // + e[0].toUpperCase()
               , n = _e.length;
             while (n--)
                 if ((e = _e[n] + t)in ze)
@@ -2581,7 +2581,7 @@
             r ? ("content" === n && (u -= S.css(e, "padding" + ne[a], !0, i)),
             "margin" !== n && (u -= S.css(e, "border" + ne[a] + "Width", !0, i))) : (u += S.css(e, "padding" + ne[a], !0, i),
             "padding" !== n ? u += S.css(e, "border" + ne[a] + "Width", !0, i) : s += S.css(e, "border" + ne[a] + "Width", !0, i));
-        return !r && 0 <= o && (u += Math.max(0, Math.ceil(e["offset" + t[0].toUpperCase() + t.slice(1)] - o - u - s - .5)) || 0),
+        return !r && 0 <= o && (u += Math.max(0, Math.ceil(e["offset" + t.slice(1)] - o - u - s - .5)) || 0),
         u
     }
     function Ze(e, t, n) {
@@ -2589,7 +2589,7 @@
           , i = (!y.boxSizingReliable() || n) && "border-box" === S.css(e, "boxSizing", !1, r)
           , o = i
           , a = Be(e, t, r)
-          , s = "offset" + t[0].toUpperCase() + t.slice(1);
+          , s = "offset" + t.slice(1);
         if (Me.test(a)) {
             if (!n)
                 return a;
