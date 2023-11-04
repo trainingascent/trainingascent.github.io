@@ -68,18 +68,20 @@
     // xhr.withCredentials = true;
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          form.reset();
-          var formElements = form.querySelector(".form-elements")
-          if (formElements) {
-            formElements.style.display = "none"; // hide form
-          }
-          var thankYouMessage = form.querySelector(".thankyou_message");
-          if (thankYouMessage) {
-            thankYouMessage.style.display = "block";
-          }
-        }
-    };
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        // Clear the current page content
+        document.body.innerHTML = '';
+
+        // Create a thank-you message and append it to the body
+        var thankYouDiv = document.createElement('div');
+        thankYouDiv.innerHTML = '<h1>Thank you for your submission!</h1><p>We will get back to you soon.</p>';
+        document.body.appendChild(thankYouDiv);
+
+        // Optionally, apply some basic styles to center the thank-you message
+        document.body.style.textAlign = 'center';
+        document.body.style.paddingTop = '50px';
+    }
+};
     // url encode form data for sending as post data
     var encoded = Object.keys(data).map(function(k) {
         return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
