@@ -504,9 +504,9 @@ body.fade-in {
     width: 80%
   }
 
-  .processcard img {
-    width: 5%;
-    height: 5%;
+  .processcard img,
+  .pricingcard img {
+    object-fit: contain;
   }
 }
 
