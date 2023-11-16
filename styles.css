@@ -503,6 +503,11 @@ body.fade-in {
   .formcard {
     width: 80%
   }
+
+  .column img {
+    width: 10%;
+    height: 10%;
+  }
 }
 
 .footer {
